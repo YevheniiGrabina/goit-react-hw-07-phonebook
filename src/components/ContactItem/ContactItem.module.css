@@ -1,0 +1,18 @@
+.contactItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+    margin: 15px;
+}
+
+.contactContainer {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px;
+}
+
+.contactName {
+    margin-right: 15px;
+}
