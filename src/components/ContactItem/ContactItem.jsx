@@ -1,4 +1,5 @@
 import s from './ContactItem.module.css';
+import PropTypes from 'prop-types';
 import { useDeleteContactMutation } from '../../API/contactsApi';
 
 const ContactItem = ({ contact }) => {
@@ -20,6 +21,17 @@ const ContactItem = ({ contact }) => {
       </button>
     </li>
   );
+};
+
+
+ContactItem.propTypes = {
+  filteredContacts: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
 };
 
 export default ContactItem;
